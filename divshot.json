@@ -1,0 +1,11 @@
+{
+  "name": "ss14-team-90",
+  "root": "public",
+  "clean_urls": true,
+  "cache_control": {
+    "/assets/**": 31536000,
+    "/public/**": "no-cache, no-store",
+    "/": false
+  },
+  "routes": {}
+}
