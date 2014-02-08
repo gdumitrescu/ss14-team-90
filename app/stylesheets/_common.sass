@@ -1,0 +1,28 @@
+// elements
+*
+  +box-sizing(border-box)
+
+#{$all-text-inputs}
+  border: 1px solid $base-color
+
+#{$all-text-inputs-hover}
+  background: $support-color
+
+#{$all-text-inputs-focus}
+  background: $accent-color
+
+body
+  @extend %reset-box
+  font-family: "Helvetica Neue", Arial, sans-serif
+
+a
+  color: $accent-color
+  &:active, &:hover, &:link, &:visited
+    @extend %reset-link
+    color: $light-accent-color
+
+ol, ul, li
+  @extend %reset-list
+
+p
+  @extend %left

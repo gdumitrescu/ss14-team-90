@@ -1,0 +1,54 @@
+// mixins and placeholders
+
+// mixins
+
+// simple grid
+$width: 100%
+$columns: 10
+$column-width: $width / $columns
+
+=cols($nr)
+  width: $column-width * $nr
+
+// placeholders
+%row
+  +cols(10)
+
+%reset-box
+  border: none
+  margin: 0
+  padding: 0
+%reset-link
+  text-decoration: none
+%reset-list
+  list-style: none
+
+
+%relative
+  position: relative
+%fixed
+  position: fixed
+%centered
+  @extend %relative
+  margin: 0 auto
+  text-align: center
+
+%left
+  float: left
+  text-align: left
+%right
+  float: left
+  text-align: left
+
+%bold
+  font-weight: bold
+%normal
+  font-weight: normal
+  line-height: normal
+
+%capitals
+  text-transform: capitalize
+%lcase
+  text-transform: lowercase
+%ucase
+  text-transform: uppercase
