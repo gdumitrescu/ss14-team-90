@@ -1,3 +1,34 @@
-<div class="row large-12 columns">
+<header class="header-container">
+
+  <nav class="top-nav">
+
+    <div class="top-title">
+      <h1 class="heading">
+        {{#linkTo 'index'}} Title {{/linkTo}}
+      </h1>
+    </div>
+
+    <ul class="top-nav-link-list">
+      <li>
+        <i class="icon-search"></i>
+        {{#linkTo 'search'}} Search {{/linkTo}}
+      </li>
+      <li>
+        <icon class="icon-user"></i>
+        {{#linkTo 'profile'}} Profile {{/linkTo}}
+      </li>
+    </ul>
+  </nav>
+<header>
+
+<div id="main" class="main-container">
+    <dl class="sub-nav">
+      <dd class="active"><a href="#">All</a></dd>
+      <dd><a href="#">New</a></dd>
+      <dd><a href="#">Recent</a></dd>
+    </dl>
   {{ outlet }}
 </div>
+
+<footer class="footer-container">
+</footer>
