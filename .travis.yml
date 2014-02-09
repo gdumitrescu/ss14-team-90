@@ -1,10 +1,8 @@
 language: node_js
-
 node_js:
-  - "0.11"
-  - "0.10"
-  - "0.8"
-  - "0.6"
+  - '0.11'
+  - '0.10'
+  - '0.8'
 
 before_script:
   - gem install sass
@@ -17,3 +15,5 @@ deploy:
     staging: staging
     production: production
   skip_cleanup: true
+  api_key:
+    secure: d+FC7iG2jyCYjfxnYzS/xF5zjZ1hGbnRlqbyRz4aTnuWU6ZD2ITzZir8ajlLfUs42y8XOYGmogLbt+igk/KAftKKLOlKsfxYZBhlN5IypLD0xEgXuswqsBxtpJTMqlGGAZlLeyA96ZCYN4aUvtCJAU7GTwlSoAYtzwq2+8msMVw=
