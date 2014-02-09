@@ -8,6 +8,10 @@ App = window.App = Ember.Application.create(
 )
 
 
-App.ApplicationAdapter = DS.RESTAdapter.extend({
-  host: "/api/titles.json"
-});
+# App.ApplicationAdapter = DS.RESTAdapter.extend(
+#   host: "/api/titles.json"
+# );
+
+App.ApplicationAdapter = DS.FirebaseAdapter.extend(
+  firebase: new Firebase("https://mediatracker.firebaseio-demo.com/")
+)

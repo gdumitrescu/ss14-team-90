@@ -19,6 +19,9 @@
       @extend %left
       font-size: $largest
       padding: 0 $unit/1.5
+      +transition(transform 0.5s ease-in-out)
+      &:hover
+        +transform(scale(1.25))
     .title-text
       @extend %left
       @extend %smallcaps
@@ -135,7 +138,10 @@
 // footer
 .copyright
   @extend %left
-  @extend %row
   @extend %smallcaps
+  +cols(8.5)
   font-size: $small
   text-indent: $unit/2
+.crowd-favourite-button
+  @extend %right
+  +cols(1.5)
