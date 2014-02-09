@@ -39,7 +39,6 @@
       @extend %left
       @extend %no-border
     i[class^="icon-"]
-      color: $accent-color
       font-size: $largest
 
 .header-search-form
@@ -55,7 +54,6 @@
     @extend %right
     +cols(2)
     &:before
-      color: $accent-color
       font-size: $largest
       text-indent: $unit/5
 
@@ -95,10 +93,11 @@
     color: $accent-color
   .title-heading
     @extend %bold
-    color: $lighter-accent-color
+    color: $lightest-accent-color
   .title-type
     @extend %italic
     @extend %right
+    color: $light-accent-color
   .title-author
     +height(2.5*$unit)
     font-style: italic
