@@ -11,8 +11,18 @@ $column-width: $width / $columns
   width: $column-width * $nr
 
 // placeholders
+%group
+  +clearfix
+
 %row
   +cols(10)
+
+%no-border
+  border: none
+%no-margin
+  margin: 0
+%no-padding
+  padding: 0
 
 %reset-box
   border: none
@@ -43,8 +53,14 @@ $column-width: $width / $columns
 %bold
   font-weight: bold
 %normal
+  font-size: $normal
   font-weight: normal
   line-height: normal
+
+%large
+  font-size: $large
+%large
+  font-size: $small
 
 %capitals
   text-transform: capitalize
@@ -52,3 +68,6 @@ $column-width: $width / $columns
   text-transform: lowercase
 %ucase
   text-transform: uppercase
+%smallcaps
+  font-variant: small-caps
+

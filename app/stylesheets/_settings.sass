@@ -5,7 +5,7 @@ $helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif
 $monospace: unquote("'Bitstream Vera Sans Mono', Consolas, Courier, monospace")
 $verdana: Verdana, Geneva, sans-serif
 
-// colors
+// new default colors
 $black:  rgba(17,17,17,1)
 $blue:  rgba(0,116,217,1)
 $gray:   rgba(170,170,170,1)
@@ -15,26 +15,49 @@ $red:     rgba(255,65,54,1)
 $silver: rgba(221,221,221,1)
 $white:  rgba(255,255,255,1)
 
+// flat ui colors
+$concrete: rgba(149,165,166,1)
+$peterriver: rgba(52,152,219,1)
+$midnightblue: rgba(44,62,80,1)
+
 // defaults
 $font-stack: $helvetica
 $font-size: 16px
-$font-color: $black
 $unit: 1em
 
 // brand, function, action colors
-$base-color: $blue
+$base-color: $peterriver
 $support-color: $black
-$accent-color: $silver
+$accent-color: $concrete
 
 // font sizes
+$small: x-small
 $small: small
 $normal: medium
 $large: large
+$larger: x-large
 
 $light-base-color: scale-color($base-color, $lightness: 25%)
-$light-support-color: scale-color($support-color, $lightness: 50%)
-$light-accent-color: scale-color($accent-color, $lightness: 75%)
+$light-support-color: scale-color($support-color, $lightness: 25%)
+$light-accent-color: scale-color($accent-color, $lightness: 25%)
+
+$lighter-base-color: scale-color($base-color, $lightness: 50%)
+$lighter-support-color: scale-color($support-color, $lightness: 50%)
+$lighter-accent-color: scale-color($accent-color, $lightness: 50%)
+
+$lightest-base-color: scale-color($base-color, $lightness: 75%)
+$lightest-support-color: scale-color($support-color, $lightness: 75%)
+$lightest-accent-color: scale-color($accent-color, $lightness: 75%)
+
 
 $dark-base-color: scale-color($base-color, $lightness: -25%)
-$dark-support-color: scale-color($support-color, $lightness: -50%)
-$dark-accent-color: scale-color($accent-color, $lightness: -75%)
+$dark-support-color: scale-color($support-color, $lightness: -25%)
+$dark-accent-color: scale-color($accent-color, $lightness: -25%)
+
+$darker-base-color: scale-color($base-color, $lightness: -50%)
+$darker-support-color: scale-color($support-color, $lightness: -50%)
+$darker-accent-color: scale-color($accent-color, $lightness: -50%)
+
+$darkest-base-color: scale-color($base-color, $lightness: -75%)
+$darkest-support-color: scale-color($support-color, $lightness: -75%)
+$darkest-accent-color: scale-color($accent-color, $lightness: -75%)

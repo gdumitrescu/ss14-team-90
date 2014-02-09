@@ -1,30 +1,30 @@
 <header class="header-container">
+  <nav class="navbar">
 
-  <nav class="top-nav">
-
-    <div class="page-heading">
-      <h1 class="heading-text">
-        {{#linkTo 'index'}} title {{/linkTo}}
+    <div class="heading-title">
+      <h1 class="title-text">
+        {{#linkTo "index"}} title {{/linkTo}}
       </h1>
     </div>
 
-    <ul class="top-nav-links">
+    <ul class="header-links">
       <li>
-        <i class="icon-search"></i>
-        {{#linkTo 'search'}} search {{/linkTo}}
+        {{#linkTo "search"}}
+          <i class="icon-search"></i>
+        {{/linkTo}}
       </li>
       <li>
-        <icon class="icon-user"></i>
-        {{#linkTo 'profile'}} profile {{/linkTo}}
+        {{#linkTo "login"}}
+          <i class="icon-signin"></i>
+        {{/linkTo}}
       </li>
     </ul>
   </nav>
-<header>
+</header>
 
-<div id="main" class="main-container">
-
+<section id="main" class="main-container">
   {{ outlet }}
-</div>
+</section>
 
-<footer class="footer-container">
-</footer>
+<aside id="sidebar" class="sidebar">
+</aside>

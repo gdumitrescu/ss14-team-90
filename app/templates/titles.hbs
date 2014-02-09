@@ -1,0 +1,23 @@
+<div class="titles-cnotainer">
+  <ul class="titles-list">
+  {{#each}}
+    <li class="title-item">
+      <img {{bindAttr src=cover}} class="title-media" alt="{{title}}" />
+      <div class="title-caption">
+        <h5 class="title-heading">{{type}} {{title}}</h5>
+        <div class="title-description">description</div>
+        <div class="title-stats">
+          <i class="icon-bookmark">3</i>
+          <i class="icon-eye-open">3</i>
+          <i class="icon-thumbs-up">5</i>
+          <i class="icon-heart">6</i>
+          <i class="icon-comments">4</i>
+      </div>
+    </li>
+  {{/each}}
+  </ul>
+
+  <div class="title-details">
+  </div>
+
+</div>

@@ -2,11 +2,96 @@
 @import "settings"
 @import "mixins"
 @import "common"
-@import "layouts"
+// @import "layouts"
+
+%container
+  @extend %group
+  @extend %row
+
+.header-container
+  @extend %row
+  background: $support-color
+  color: $accent-color
+  padding: $unit/2 0
+  top: 0
+
+.main-container
+  @extend %container
+  background: $light-accent-color
+  display: block
+  height: 100%
+  min-height: 100%
+
+.sidebar
+  +cols(3)
+
 
 // Pages
-
 // index page
+
+.navbar
+  @extend %container
+
+.heading-title
+  @extend %left
+  +cols(7.5)
+  .title-text
+    @extend %bold
+    @extend %large
+    @extend %ucase
+    text-indent: $unit
+
+.header-links
+  @extend %right
+  +cols(2.5)
+  li
+    @extend %right
+    +inline-block
+    padding: 0 $unit
+    i[class^="icon-"]
+      color: $accent-color
+
+// titles
+.titles-container
+  @extend %container
+
+.titles-list
+  @extend %left
+  +cols(5)
+  background: $lightest-accent-color
+
+  .title-item
+    @extend %group
+    @extend %row
+    +cols(10)
+    border: 1px solid $lighter-accent-color
+    padding: $unit/4
+    &:first-child
+      @extend %no-border
+
+  .title-media
+    @extend %left
+    +cols(2)
+    padding: 0 $unit/4 0 0
+
+  .title-caption
+    @extend %right
+    +cols(8)
+    color: $accent-color
+  .title-heading
+    @extend %bold
+    color: $darker-base-color
+  .title-description
+    font-size: $small
+  .title-stats
+    color: $accent-color
+    font-size: $smaller
+    i[class^="icon-"]:before
+      margin: 0 $unit/5 0 0
+
+.title-details
+  @extend %right
+  +cols(5)
 
 // profile page
 
