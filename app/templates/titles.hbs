@@ -1,8 +1,11 @@
-<div class="titles-cnotainer">
+<section class="titles-cnotainer">
+
   <ul class="titles-list">
   {{#each}}
     <li class="title-item">
+
       <img {{bindAttr src=cover}} class="title-media" alt="{{title}}" />
+
       <div class="title-caption">
 
         <h5 class="title-heading">{{title}}
@@ -19,6 +22,7 @@
             <i class="icon-heart">{{favourites}}</i>
             <i class="icon-comments">{{comments}}</i>
           </div>
+        </div>
 
       </div>
 
@@ -27,6 +31,7 @@
   </ul>
 
   <div class="title-details">
+
   </div>
 
-</div>
+</section>
