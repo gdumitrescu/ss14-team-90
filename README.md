@@ -1,4 +1,4 @@
-ss14-team-90
+ss14-team-90 [![Build Status](https://magnum.travis-ci.com/staticshowdown/ss14-team-90.png?token=WTVN9NeAcZuNpMR6AFvA&branch=master)](https://magnum.travis-ci.com/staticshowdown/ss14-team-90)
 ============
 
 Official competition repo for team FEWD.
