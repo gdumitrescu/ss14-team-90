@@ -10,7 +10,8 @@
     "node": "~0.6.10 || 0.8 || 0.9"
   },
   "scripts": {
-    "start": "brunch watch --server"
+    "start": "brunch watch --server",
+    "test": "brunch build --production"
   },
   "dependencies": {
     "javascript-brunch": ">= 1.0 < 2.0",
