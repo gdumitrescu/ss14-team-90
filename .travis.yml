@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "0.11"
+  - "0.10"
+  - "0.8"
+  - "0.6"
+
+deploy:
+  provider: divshot
+  environment:
+    master: development
+    staging: staging
+    production: production
+  skip_cleanup: true
