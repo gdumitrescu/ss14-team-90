@@ -10,6 +10,11 @@ $column-width: $width / $columns
 =cols($nr)
   width: $column-width * $nr
 
+=height($size: $unit)
+  height: $size
+  max-height: $size
+  min-height: $size
+
 // placeholders
 %group
   +clearfix
@@ -47,8 +52,8 @@ $column-width: $width / $columns
   float: left
   text-align: left
 %right
-  float: left
-  text-align: left
+  float: right
+  text-align: right
 
 %bold
   font-weight: bold
@@ -56,11 +61,6 @@ $column-width: $width / $columns
   font-size: $normal
   font-weight: normal
   line-height: normal
-
-%large
-  font-size: $large
-%large
-  font-size: $small
 
 %capitals
   text-transform: capitalize

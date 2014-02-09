@@ -4,15 +4,24 @@
     <li class="title-item">
       <img {{bindAttr src=cover}} class="title-media" alt="{{title}}" />
       <div class="title-caption">
-        <h5 class="title-heading">{{type}} {{title}}</h5>
-        <div class="title-description">description</div>
+
+        <h5 class="title-heading">{{title}}
+          <span class="title-type">{{type}}</span></h5>
+
+        <div class="title-description">{{name}}</div>
+
         <div class="title-stats">
-          <i class="icon-bookmark">3</i>
-          <i class="icon-eye-open">3</i>
-          <i class="icon-thumbs-up">5</i>
-          <i class="icon-heart">6</i>
-          <i class="icon-comments">4</i>
+          <div class="title-category">{{category}}</div>
+          <div class="title-social">
+            <i class="icon-bookmark">{{bookmarks}}</i>
+            <i class="icon-eye-open">{{views}}</i>
+            <i class="icon-thumbs-up">{{reviews}}</i>
+            <i class="icon-heart">{{favourites}}</i>
+            <i class="icon-comments">{{comments}}</i>
+          </div>
+
       </div>
+
     </li>
   {{/each}}
   </ul>

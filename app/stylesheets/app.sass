@@ -8,27 +8,24 @@
   @extend %group
   @extend %row
 
-.header-container
-  @extend %row
+.header-container, .footer-container
+  @extend %centered
+  @extend %container
   background: $support-color
   color: $accent-color
   padding: $unit/2 0
-  top: 0
 
 .main-container
+  @extend %centered
   @extend %container
-  background: $light-accent-color
-  display: block
+  background: $darkest-accent-color
   height: 100%
   min-height: 100%
 
 .sidebar
   +cols(3)
 
-
-// Pages
-// index page
-
+// header
 .navbar
   @extend %container
 
@@ -37,37 +34,41 @@
   +cols(7.5)
   .title-text
     @extend %bold
-    @extend %large
-    @extend %ucase
-    text-indent: $unit
+    @extend %smallcaps
+    font-size: $larger
+    text-indent: $unit/4
 
 .header-links
   @extend %right
   +cols(2.5)
   li
-    @extend %right
+    @extend %centered
     +inline-block
     padding: 0 $unit
     i[class^="icon-"]
       color: $accent-color
 
+
+// Pages
+// index page
+
 // titles
 .titles-container
   @extend %container
 
-.titles-list
+ul.titles-list
   @extend %left
   +cols(5)
-  background: $lightest-accent-color
+  background: transparent
 
-  .title-item
+  li.title-item
     @extend %group
     @extend %row
-    +cols(10)
-    border: 1px solid $lighter-accent-color
+    border-top: 1px solid $darker-accent-color
+    border-right: 1px solid $darker-accent-color
     padding: $unit/4
     &:first-child
-      @extend %no-border
+      border-top: none
 
   .title-media
     @extend %left
@@ -75,19 +76,35 @@
     padding: 0 $unit/4 0 0
 
   .title-caption
-    @extend %right
+    @extend %left
     +cols(8)
+    +height(4*$unit)
     color: $accent-color
   .title-heading
     @extend %bold
-    color: $darker-base-color
+    color: $lighter-accent-color
+  .title-type
+    @extend %right
   .title-description
+    +height(2*$unit)
+    font-style: italic
     font-size: $small
+    overflow: hidden
+    text-overflow: ellipsis
   .title-stats
-    color: $accent-color
+    @extend %row
+    bottom: 0
     font-size: $smaller
-    i[class^="icon-"]:before
-      margin: 0 $unit/5 0 0
+    position: relative
+  .title-category
+    @extend %bold
+    @extend %left
+  .title-social
+    @extend %right
+    i[class^="icon-"]
+      width: 2*$unit
+      &:before
+        margin: 0 $unit/5 0 $unit/4
 
 .title-details
   @extend %right
@@ -96,3 +113,11 @@
 // profile page
 
 // search search
+
+
+// footer
+.copyright
+  @extend %left
+  @extend %row
+  font-size: $smaller
+  text-indent: $unit/2
