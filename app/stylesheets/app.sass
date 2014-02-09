@@ -10,7 +10,7 @@
 
 .heading-title
   @extend %left
-  +cols(7.5)
+  +cols(6)
   .title-text
     @extend %bold
     @extend %smallcaps
@@ -19,13 +19,21 @@
 
 .header-links
   @extend %right
-  +cols(2.5)
+  +cols(4)
   li
     @extend %centered
     +inline-block
+    border-left: 1px solid $darkest-accent-color
     padding: 0 $unit
+    &:first-child
+      border: none
     i[class^="icon-"]
       color: $accent-color
+
+.header-search-form
+  display: none
+  .search-form-input
+    +cols(1.5)
 
 // Pages
 // index page
@@ -34,17 +42,21 @@
 .titles-container
   @extend %container
 
-ul.titles-list
+.titles-list
   @extend %left
   +cols(5)
   background: transparent
 
-  li.title-item
+  .title-item
     @extend %group
     @extend %row
+    +transition (background 0.5s ease-in-out)
+    background: $darkest-accent-color
     border-top: 1px solid $darker-accent-color
     border-right: 1px solid $darker-accent-color
     padding: $unit/4
+    &:hover
+      background: lighten($darkest-accent-color, 10%)
     &:first-child
       border-top: none
 
@@ -63,12 +75,15 @@ ul.titles-list
     color: $lighter-accent-color
   .title-type
     @extend %right
-  .title-description
-    +height(2*$unit)
+  .title-author
+    +height(2.5*$unit)
     font-style: italic
     font-size: $small
     overflow: hidden
     text-overflow: ellipsis
+  .title-description
+    +height(2.5*$unit)
+    font-size: $small
   .title-stats
     @extend %row
     bottom: 0

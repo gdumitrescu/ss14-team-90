@@ -4,15 +4,19 @@
 
     <div class="heading-title">
       <h1 class="title-text">
-        {{#linkTo "index"}} MediaTracker {{/linkTo}}
+        {{#linkTo "index"}}MediaTracker{{/linkTo}}
       </h1>
     </div>
 
     <ul class="header-links">
       <li>
+        <form id="headerSearchForm" class="header-search-form">
+        <input type="text" value="" placeholder="Search..."
+          id="search" class="search-form-input">
         {{#linkTo "search"}}
           <i class="icon-search"></i>
         {{/linkTo}}
+        </form>
       </li>
       <li>
         {{#linkTo "login"}}
@@ -23,9 +27,9 @@
   </nav>
 </header>
 
-<section id="main" class="main-container">
+<div id="main" class="main-container">
   {{ outlet }}
-</section>
+</div>
 
 <footer class="footer-container">
   <small class="copyright">&copy; 2014 MediaTracker</small>

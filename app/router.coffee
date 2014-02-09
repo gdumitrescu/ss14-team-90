@@ -1,7 +1,8 @@
 "use strict"
 
 App.Router.map( ->
-  @resource "titles"
+  @resource "titles", ->
+    @resource "title", path: "/:title_id"
   @resource "login"
   @resource "search"
 )
@@ -12,18 +13,26 @@ App.IndexRoute = Ember.Route.extend(
 )
 
 App.TitlesRoute = Ember.Route.extend(
+  # titles = "https://mediatracker.firebaseio-demo.com/titles.json"
+  # model: -> $.getJSON(titles)
   model: -> titles
 )
+
+App.TitleRoute = Ember.Route.extend(
+  model: (params)->
+    titles.findBy("id", params.title_id)
+)
+
 
 # Fixtures
 titles = [
   id: 1
   title: "Astral Weeks"
-  name: "Van Morrison"
+  author: "Van Morrison"
   category: "Jazz"
   type: "CD"
   description: "Astral Weeks is generally considered one of the best albums in pop music history."
-  cover: "http://lorempixel.com/45/45/nature/1"
+  cover: "http://lorempixel.com/50/50/nature/1"
   bookmarks: 5
   views: 64
   reviews: 3
@@ -32,11 +41,11 @@ titles = [
 ,
   id: 2
   title: "Kind of Blue"
-  name: "Miles Davis"
+  author: "Miles Davis"
   category: "Jazz"
   type: "LP"
   description: "Kind of Blue isn't merely an artistic highlight for Miles Davis, it's an album that towers above its peers, a record generally considered as the definitive jazz album, a universally acknowledged standard of excellence."
-  cover: "http://lorempixel.com/45/45/nature/2"
+  cover: "http://lorempixel.com/50/50/nature/2"
   bookmarks: 4
   views: 53
   reviews: 8
@@ -45,11 +54,11 @@ titles = [
 ,
   id: 3
   title: "Friends Seen and Unseen"
-  name: "Charlie Hunter"
+  author: "Charlie Hunter"
   category: "Rock"
   type: "DVD"
   description: "He's got a melodic foil to play off of, and someone supplying a beat, but not so many things going on that you can't concentrate on what he's doing"
-  cover: "http://lorempixel.com/45/45/nature/3"
+  cover: "http://lorempixel.com/50/50/nature/3"
   bookmarks: 1
   views: 7
   reviews: 32

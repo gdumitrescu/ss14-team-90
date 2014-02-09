@@ -1,17 +1,16 @@
-<section class="titles-cnotainer">
+<section class="titles-container">
 
   <ul class="titles-list">
   {{#each}}
     <li class="title-item">
-
+      {{#linkTo "title" this}}
       <img {{bindAttr src=cover}} class="title-media" alt="{{title}}" />
-
       <div class="title-caption">
 
         <h5 class="title-heading">{{title}}
           <span class="title-type">{{type}}</span></h5>
 
-        <div class="title-description">{{name}}</div>
+        <div class="title-author">{{author}}</div>
 
         <div class="title-stats">
           <div class="title-category">{{category}}</div>
@@ -25,13 +24,13 @@
         </div>
 
       </div>
-
+      {{/linkTo}}
     </li>
   {{/each}}
   </ul>
 
-  <div class="title-details">
-
+  <div class="details-container">
+    {{ outlet }}
   </div>
 
 </section>
