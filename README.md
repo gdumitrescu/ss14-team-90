@@ -42,6 +42,6 @@ This site is live at http://ss14-team-90.divshot.io/
 
 ### Credits
 
-[edgycircle](https://github.com/edgycircle/cinder-plate)
+[edgycircle](https://github.com/edgycircle/cinder-plate) - Thanks for the Brunch.io skeleton with CoffeeScript, SASS, template pre-compilation, production and development builds
 
 
