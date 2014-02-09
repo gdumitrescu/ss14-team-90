@@ -6,3 +6,8 @@ App = window.App = Ember.Application.create(
   LOG_ACTIVE_GENERATION: true
   LOG_VIEW_LOOKUPS: true
 )
+
+
+App.ApplicationAdapter = DS.RESTAdapter.extend({
+  host: "/api/titles.json"
+});

@@ -8,32 +8,56 @@
 .navbar
   @extend %container
 
-.heading-title
+.heading-box
   @extend %left
-  +cols(6)
-  .title-text
+  +cols(6.75)
+  .heading-title
+    @extend %container
     @extend %bold
-    @extend %smallcaps
     font-size: $larger
-    text-indent: $unit/4
+    i[class^="icon-"]
+      @extend %left
+      font-size: $largest
+      padding: 0 $unit/1.5
+    .title-text
+      @extend %left
+      @extend %smallcaps
+      padding: $unit/4 0
+      vertical-align: top
 
 .header-links
   @extend %right
-  +cols(4)
+  vertical-align: middle
+  width: auto
   li
     @extend %centered
     +inline-block
     border-left: 1px solid $darkest-accent-color
-    padding: 0 $unit
+    padding: 0 $unit/2
+    width: auto
     &:first-child
-      border: none
+      @extend %left
+      @extend %no-border
     i[class^="icon-"]
       color: $accent-color
+      font-size: $largest
 
 .header-search-form
-  display: none
+  @extend %right
   .search-form-input
-    +cols(1.5)
+    +cols(8)
+    @extend %left
+    background: $support-color
+    height: 2.25*$unit
+    vertical-align: top
+  i[class^="icon-"]
+    @extend %reset-box
+    @extend %right
+    +cols(2)
+    &:before
+      color: $accent-color
+      font-size: $largest
+      text-indent: $unit/5
 
 // Pages
 // index page
@@ -52,13 +76,12 @@
     @extend %row
     +transition (background 0.5s ease-in-out)
     background: $darkest-accent-color
-    border-top: 1px solid $darker-accent-color
+    border-top: none
+    border-bottom: 1px solid $darker-accent-color
     border-right: 1px solid $darker-accent-color
     padding: $unit/4
     &:hover
       background: lighten($darkest-accent-color, 10%)
-    &:first-child
-      border-top: none
 
   .title-media
     @extend %left
@@ -74,6 +97,7 @@
     @extend %bold
     color: $lighter-accent-color
   .title-type
+    @extend %italic
     @extend %right
   .title-author
     +height(2.5*$unit)
@@ -102,6 +126,7 @@
 .title-details
   @extend %right
   +cols(5)
+  background: darker-accent-color
 
 // profile page
 

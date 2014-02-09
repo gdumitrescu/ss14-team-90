@@ -12,11 +12,16 @@
   padding: $unit/2 0
 
 .main-container
-  @extend %centered
   @extend %container
   background: $darkest-accent-color
+  float: left
   height: 100%
   min-height: 100%
+  overflow: hidden
+  +clearfix
 
-.sidebar
-  +cols(3)
+
+.footer-container
+  float: left
+  bottom: 0
+  position: fixed

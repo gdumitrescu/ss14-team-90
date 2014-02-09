@@ -14,6 +14,8 @@ App.IndexRoute = Ember.Route.extend(
 
 App.TitlesRoute = Ember.Route.extend(
   # titles = "https://mediatracker.firebaseio-demo.com/titles.json"
+  # titles = "http://www.json-generator.com/j/bHwdgEhYzm?indent=4"
+  # titles = "/api/titles.json"
   # model: -> $.getJSON(titles)
   model: -> titles
 )

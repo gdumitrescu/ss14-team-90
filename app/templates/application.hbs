@@ -2,9 +2,10 @@
 <header class="header-container">
   <nav class="navbar">
 
-    <div class="heading-title">
-      <h1 class="title-text">
-        {{#linkTo "index"}}MediaTracker{{/linkTo}}
+    <div class="heading-box">
+      <h1 class="heading-title">
+        {{#linkTo "index"}}<i class="icon-reorder"></i>{{/linkTo}}
+        {{#linkTo "index"}}<span class="title-text">MediaTracker<span>{{/linkTo}}
       </h1>
     </div>
 
@@ -29,8 +30,9 @@
 
 <div id="main" class="main-container">
   {{ outlet }}
+
+<div class="footer-container">
+  <small class="copyright">&copy; 2014 MediaTracker</small>
 </div>
 
-<footer class="footer-container">
-  <small class="copyright">&copy; 2014 MediaTracker</small>
-</footer>
+</div>

@@ -3,20 +3,22 @@
   @extend %reset-box
   +box-sizing(border-box)
 
-// #{$all-text-inputs}
-//   border: 1px solid $base-color
+#{$all-text-inputs}
+  border: 1px solid $base-color
 
-// #{$all-text-inputs-hover}
-//   background: $support-color
+#{$all-text-inputs-hover}
+  background: $support-color
 
-// #{$all-text-inputs-focus}
-//   background: $accent-color
+#{$all-text-inputs-focus}
+  background: $support-color
 
 body
   @extend %reset-box
+  background: $darkest-accent-color
   font-family: "Helvetica Neue", Arial, sans-serif
 a
   color: $accent-color
+  display: block
   &:active, &:hover, &:link, &:visited
     @extend %reset-link
     color: $light-accent-color
