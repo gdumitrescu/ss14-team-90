@@ -19,7 +19,7 @@
     "css-brunch": ">= 1.0 < 2.0",
     "uglify-js-brunch": ">= 1.0 < 2.0",
     "clean-css-brunch": ">= 1.0 < 2.0",
-    "sass-brunch": "1.6",
+    "sass-brunch": "1.9",
     "ember-handlebars-brunch": "1.0.4"
   },
   "devDependencies": {
